@@ -10,7 +10,7 @@ android {
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.kotlin.eyeview"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -44,21 +44,22 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //SmartRefreshLayout
-//    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-15'
     //BRVAH 强大的recyclerView框架
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+
     //glide图片加载框架
-    //api 'com.github.bumptech.glide:glide:3.7.0'
-//    implementation 'com.github.bumptech.glide:glide:4.0.0'
-//    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
+
     //魅族Banner
     implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.0'
     //圆形ImageView
     api 'de.hdodenhof:circleimageview:3.0.1'
+
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    //图表
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
 
     // Appcompat-v7 (only Anko Commons)
     api "org.jetbrains.anko:anko-appcompat-v7-commons:$anko_version"

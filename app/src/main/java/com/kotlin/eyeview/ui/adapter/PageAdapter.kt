@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 class PageAdapter(
     fm: FragmentManager?,
     var list: List<Fragment>,
-    titles: MutableList<String>
+    var titles: List<String>
 ): FragmentPagerAdapter(fm!!) {
     //PageAdapter用于适配viewpage
 
@@ -21,7 +21,12 @@ class PageAdapter(
         return list.size
     }
 
+    override fun getPageTitle(position: Int): CharSequence? {
+        return titles[position]
+    }
+
     override fun destroyItem(container: View, position: Int, `object`: Any) {
 //        super.destroyItem(container, position, `object`)
     }
+
 }

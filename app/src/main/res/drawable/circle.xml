@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按压状态下-->
+    <item android:state_pressed="true"
+        >
+        <shape
+            android:shape="oval"
+            android:useLevel="false">
+            <!-- 圆角，你也可以对不同的角设置不同的数值 -->
+            <!--                    <corners android:radius="90dp" />-->
+            <!--阴影处理，一般有边框和下边框做阴影处理-->
+            <gradient
+                android:startColor="#fff"
+                android:endColor="#fff"
+                android:centerColor="#fff"
+                android:angle="0"/>
+            <!-- 形状的填充色 -->
+            <solid android:color="#4DB6B6B6"/>
+            <!-- 边框宽度和颜色 -->
+            <stroke android:width="3dp" android:color="#FFFFFF" />
+            <size
+                android:width="200dp"
+                android:height="200dp"/>
+        </shape>
+    </item>
+
+<!--    默认状态-->
+    <item>
+        <layer-list>
+            <item>
+
+                <shape
+                    android:shape="oval"
+                    android:useLevel="false">
+                    <!-- 圆角，你也可以对不同的角设置不同的数值 -->
+<!--                    <corners android:radius="90dp" />-->
+                    <!--阴影处理，一般有边框和下边框做阴影处理-->
+                    <gradient
+                        android:startColor="#fff"
+                        android:endColor="#fff"
+                        android:centerColor="#fff"
+                        android:angle="0"/>
+                    <!-- 形状的填充色 -->
+                    <solid android:color="#4D000000"/>
+                    <!-- 边框宽度和颜色 -->
+                    <stroke android:width="3dp" android:color="#FFFFFF" />
+<!--                    设置为圆形-->
+                    <size
+                        android:width="200dp"
+                        android:height="200dp"/>
+
+                </shape>
+            </item>
+
+        </layer-list>
+        <!-- shape如果不声明形状则默认为正方形 -->
+
+    </item>
+
+
+
+</selector>
