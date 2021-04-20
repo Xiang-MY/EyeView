@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import cn.bmob.v3.Bmob
 import com.kotlin.eyeview.R
 import com.kotlin.eyeview.ui.Phone
+import com.kotlin.eyeview.ui.SetPassword
 import kotlinx.android.synthetic.main.activity_register.*
 import org.jetbrains.anko.toast
 
@@ -29,7 +30,7 @@ class RegisterActivity : AppCompatActivity() {
             val isphone=Phone().isMobile(userphone)
             val verify=verificationCode.text.toString()
             if (isphone&&verify=="1234"){
-                val intent= Intent(this,SetPassword::class.java)
+                val intent= Intent(this, SetPassword::class.java)
                 intent.putExtra("register_phone",userphone)
                 startActivity(intent)
             }else{

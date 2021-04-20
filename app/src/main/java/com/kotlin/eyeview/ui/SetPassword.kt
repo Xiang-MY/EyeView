@@ -1,4 +1,4 @@
-package com.kotlin.eyeview.ui.activity
+package com.kotlin.eyeview.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +8,7 @@ import cn.bmob.v3.Bmob
 import cn.bmob.v3.exception.BmobException
 import cn.bmob.v3.listener.SaveListener
 import com.kotlin.eyeview.R
-import com.kotlin.eyeview.ui.User
-import kotlinx.android.synthetic.main.activity_register.*
+import com.kotlin.eyeview.ui.activity.LoginActivity
 import kotlinx.android.synthetic.main.activity_set_password.*
 import kotlinx.android.synthetic.main.activity_set_password.Submit
 import org.jetbrains.anko.toast
@@ -27,7 +26,7 @@ class SetPassword : AppCompatActivity() {
             if (setpassword==confirmpassword){
                savePerson()
                 toast("注册成功")
-                val intent= Intent(this,LoginActivity::class.java)
+                val intent= Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }else{
                 toast("密码不一致")

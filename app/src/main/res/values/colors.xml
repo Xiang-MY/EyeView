@@ -6,5 +6,6 @@
     <color name="backcolor">#181D30</color>
     <color name="textcolor">#F5F6F8</color>
     <color name="white">#FFFFFF</color>
+    <color name="text_color">#CCCCCC</color>
 
 </resources>

@@ -32,10 +32,10 @@
         <Button
             android:id="@+id/Login"
             android:layout_width="300dp"
-            android:layout_height="42dp"
+            android:layout_height="34dp"
             android:layout_marginTop="20dp"
             android:background="#DFECEE"
-            android:text="Login"/>
+            android:text="Login" />
 
         <Button
             android:id="@+id/SingIn"
