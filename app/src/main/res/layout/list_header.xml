@@ -13,17 +13,131 @@
         android:background="@drawable/eye_header"
         >
     </com.zhouwei.mzbanner.MZBannerView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="眼部测试"
+        android:layout_marginLeft="5dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+<!--        <LinearLayout-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:background="#ffffff"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/seMang"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <ImageView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/semang"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:text=" 色盲"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/minGan"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <ImageView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/mingandu"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="敏感度"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/sanGuang"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/sanguang" />-->
+<!--                <TextView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="   散光"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/laoHua"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <ImageView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/laohuayan"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="老花眼"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/yaLi"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <ImageView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/yali"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="压力"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+
 
     <GridView
         android:id="@+id/grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="4"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"/>
+        android:numColumns="5"
+        android:layout_marginLeft="10dp"
+        android:layout_margin="10dp"/>
 
 
     <TextView
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="恢复训练"

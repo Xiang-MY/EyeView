@@ -1,4 +1,4 @@
-package com.kotlin.eyeview.ui.Achromatopsia.activity
+package com.kotlin.eyeview.ui.detection.activity
 
 
 import android.annotation.SuppressLint
@@ -9,12 +9,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.kotlin.eyeview.R
-import com.kotlin.eyeview.ui.Achromatopsia.common.Constants
-import com.kotlin.eyeview.ui.Achromatopsia.common.Question
+import com.kotlin.eyeview.ui.detection.common.Constants
+import com.kotlin.eyeview.ui.detection.common.Question
 import kotlinx.android.synthetic.main.activity_question.*
 
 class QuestionActivity : AppCompatActivity() , View.OnClickListener{
@@ -33,7 +32,7 @@ class QuestionActivity : AppCompatActivity() , View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
-        questionCount = intent.getStringExtra(Constants.QUESTION_COUNT).toString().toInt()
+        questionCount =2
         mQuestionList = Constants.getQuestions(questionCount)
         options = listOf<TextView>(app_option1, app_option2, app_option3, app_option4)
         options.forEach{

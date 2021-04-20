@@ -1,5 +1,6 @@
 package com.kotlin.eyeview.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,9 +14,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlin.eyeview.R
+import com.kotlin.eyeview.ui.activity.RegisterActivity
+import com.kotlin.eyeview.ui.detection.common.Constants
 import com.kotlin.eyeview.ui.adapter.Bean_grid
 import com.kotlin.eyeview.ui.adapter.Bean_mainList
 import com.kotlin.eyeview.ui.adapter.List_Adapter
+import com.kotlin.eyeview.ui.detection.activity.*
 import kotlinx.android.synthetic.main.list__fragment.*
 import org.jetbrains.anko.support.v4.runOnUiThread
 import org.jetbrains.anko.support.v4.toast
@@ -32,8 +36,8 @@ class List_Fragment : Fragment() {
     var list = ArrayList<Bean_mainList>()  //存放展示的图片和文字列表
 
     //网格布局图片
-    internal var imageIds = intArrayOf(R.drawable.love, R.drawable.love,
-        R.drawable.love,R.drawable.love)
+    internal var imageIds = intArrayOf(R.drawable.semang, R.drawable.mingandu,
+        R.drawable.sanguang,R.drawable.laohuayan,R.drawable.yali)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -111,7 +115,7 @@ class List_Fragment : Fragment() {
             {
             }
         }
-        //点击事件
+//        点击事件
         gridView.onItemClickListener = object: AdapterView.OnItemClickListener{
             override fun onItemClick(
                 parent: AdapterView<*>?,
@@ -120,6 +124,25 @@ class List_Fragment : Fragment() {
                 id: Long
             ) {
                 toast("点击了第${position}项,值为${imageIds[position]}")
+                     if(position==0){
+                         val intent = Intent(activity, QuestionActivity::class.java)
+                         startActivity(intent)
+
+                     }else if (position==1){
+                         val intent = Intent(activity, SensitivityActivity::class.java)
+                         startActivity(intent)
+                     }else if(position==2){
+                         val intent=Intent(activity,AstigmatismActivity::class.java)
+                         startActivity(intent)
+                     }else if(position==3){
+                         val intent=Intent(activity,PresbyopiaActivity::class.java)
+                         startActivity(intent)
+                     }else if(position==4){
+                         val intent=Intent(activity,PressureActivity::class.java)
+                         startActivity(intent)
+                     }
+
+
             }
         }
 
@@ -198,5 +221,16 @@ class List_Fragment : Fragment() {
                 swipeRefresh.isRefreshing = false
             } }
     }
+
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        seMang.setOnClickListener {
+//            val intent = Intent(activity, QuestionActivity::class.java)
+//            val questionCount = "2"
+//            questionCount.toInt()
+//            intent.putExtra(Constants.QUESTION_COUNT, questionCount)
+//            startActivity(intent)
+//        }
+//    }
 
 }

@@ -16,8 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Achromatopsia.activity.ResultActivity"></activity>
-        <activity android:name=".ui.Achromatopsia.activity.QuestionActivity" />
+        <activity android:name=".ui.detection.activity.PressureActivity"></activity>
+        <activity android:name=".ui.detection.activity.PresbyopiaActivity" />
+        <activity android:name=".ui.detection.activity.SensitivityActivity" />
+        <activity android:name=".ui.detection.activity.AstigmatismActivity" />
+        <activity android:name=".ui.detection.activity.ResultActivity" />
+        <activity android:name=".ui.detection.activity.QuestionActivity" />
         <activity android:name=".ui.SetPassword" />
         <activity android:name=".ui.activity.RegisterActivity" />
         <activity android:name=".ui.activity.LoginActivity" />
