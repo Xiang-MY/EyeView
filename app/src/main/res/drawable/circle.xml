@@ -42,7 +42,7 @@
                         android:centerColor="#fff"
                         android:angle="0"/>
                     <!-- 形状的填充色 -->
-                    <solid android:color="#4D000000"/>
+                    <solid android:color="#C3C9EC"/>
                     <!-- 边框宽度和颜色 -->
                     <stroke android:width="3dp" android:color="#FFFFFF" />
 <!--                    设置为圆形-->

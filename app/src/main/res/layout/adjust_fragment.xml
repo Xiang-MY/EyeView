@@ -5,15 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_marginBottom="50dp">
-<!--    android:background="#CBD2DF"-->
+<!--    android:background="#CBD2DF">-->
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="40dp"
         >
 
         <Button
@@ -40,13 +40,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="护眼强度"
-            android:layout_marginBottom="3dp"/>
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="3dp">
+            android:layout_marginBottom="5dp">
 
             <SeekBar
                 android:id="@+id/seekbar1"
@@ -70,13 +72,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="系统亮度"
-            android:layout_marginBottom="3dp"/>
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="3dp">
+            android:layout_marginBottom="5dp">
 
             <SeekBar
                 android:id="@+id/seekbar2"
@@ -104,6 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -123,12 +128,14 @@
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/message"
+                    android:src="@drawable/changecolor"
                     android:layout_margin="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="消息"
+                    android:text="护眼色"
+                    android:textStyle="bold"
+                    android:textColor="#000"
                     />
             </LinearLayout>
 
@@ -142,12 +149,14 @@
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/loveeye"
+                    android:src="@drawable/zhinanzhen"
                     android:layout_margin="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="关爱"
+                    android:text="指南针"
+                    android:textStyle="bold"
+                    android:textColor="#000"
                     />
             </LinearLayout>
 
@@ -161,12 +170,14 @@
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/report"
+                    android:src="@drawable/shoudian"
                     android:layout_margin="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="报告"
+                    android:text="手电筒"
+                    android:textStyle="bold"
+                    android:textColor="#000"
                     />
             </LinearLayout>
 
@@ -189,12 +200,14 @@
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/message"
+                    android:src="@drawable/tiaojie"
                     android:layout_margin="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="消息"
+                    android:text="自动调节"
+                    android:textStyle="bold"
+                    android:textColor="#000"
                     />
             </LinearLayout>
 
@@ -208,12 +221,14 @@
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/loveeye"
+                    android:src="@drawable/shizhong"
                     android:layout_margin="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="关爱"
+                    android:text="时钟模式"
+                    android:textStyle="bold"
+                    android:textColor="#000"
                     />
             </LinearLayout>
 
@@ -227,12 +242,14 @@
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/report"
+                    android:src="@drawable/start"
                     android:layout_margin="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="报告"
+                    android:text="开机自启"
+                    android:textStyle="bold"
+                    android:textColor="#000"
                     />
             </LinearLayout>
 
