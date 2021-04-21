@@ -1,23 +1,21 @@
 package com.kotlin.eyeview.ui.fragment
 
-import android.content.ContentValues.TAG
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.GridView
+import android.widget.SimpleAdapter
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlin.eyeview.R
-import com.kotlin.eyeview.ui.activity.VideoActivity
 import com.kotlin.eyeview.ui.adapter.Bean_grid
 import com.kotlin.eyeview.ui.adapter.Bean_mainList
 import com.kotlin.eyeview.ui.adapter.List_Adapter
-import kotlinx.android.synthetic.main.grid_item.view.*
 import kotlinx.android.synthetic.main.list__fragment.*
 import org.jetbrains.anko.support.v4.runOnUiThread
 import org.jetbrains.anko.support.v4.toast
@@ -26,18 +24,16 @@ import kotlin.concurrent.thread
 class List_Fragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
+    //    private lateinit var card_recyclerView: RecyclerView
     private lateinit var gridView: GridView
     private var adapter: List_Adapter? = null
-    lateinit var videol: LinearLayout
+//    private var card_adapter: List_Adapter? = null
 
     var list = ArrayList<Bean_mainList>()  //存放展示的图片和文字列表
 
-    //网格布局
-    // 图片资源
-    var imageIds = intArrayOf(R.drawable.love, R.drawable.love,
+    //网格布局图片
+    internal var imageIds = intArrayOf(R.drawable.love, R.drawable.love,
         R.drawable.love,R.drawable.love)
-    //文字
-    var textIds  = arrayOf("色盲测试","压力测试","色盲测试","压力测试")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,6 +42,8 @@ class List_Fragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.list__fragment, container, false)
         recyclerView = view.findViewById(R.id.recyclerview)
+//        card_recyclerView = view.findViewById(R.id.card_recyclerview)
+//        gridView = view.findViewById(R.id.grid)
 
         return view
     }
@@ -62,23 +60,41 @@ class List_Fragment : Fragment() {
         )//适配器
         recyclerView.adapter = adapter
 
+        //卡片式布局适配器
+//        val card_layoutManager = LinearLayoutManager(context)  //设置排布方式
+//        card_layoutManager.orientation = LinearLayoutManager.HORIZONTAL
+//        card_recyclerView.layoutManager = card_layoutManager
+//        card_adapter = List_Adapter(
+//            R.layout.card_view,
+//            list
+//        )//适配器
+//        card_recyclerView.adapter = card_adapter
+
         //添加头部
         val headerView = LayoutInflater.from(context).inflate(R.layout.list_header,null)
         adapter!!.addHeaderView(headerView)
 
         // 创建一个List对象，List对象的元素是Map
         val listItems = ArrayList<Map<String, Any>>()
+
         for (i in imageIds.indices)
         {
             val listItem = HashMap<String, Any>()
             listItem["image"] = imageIds[i]
-            listItem["text"] = textIds[i]
             listItems.add(listItem)
-            Log.d(TAG, "onViewCreated: listItems = $listItems")
         }
-        // 创建一个SimpleAdapter传入GridView中的图片和文字
+
+        val gridList: MutableList<Bean_grid> = java.util.ArrayList()
+        for (i in 0..4){
+            gridList.add(Bean_grid(
+                "樱桃小丸子",
+                "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201410%2F20%2F20141020162058_UrMNe.jpeg&refer=http%3A%2F%2Fcdn.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1620913801&t=ee2ff3e8f40b082221a141066b779bb6"
+            ))
+        }
+
+        // 创建一个SimpleAdapter
         val simpleAdapter = SimpleAdapter(context, listItems, R.layout.grid_item,
-            arrayOf("image","text"), intArrayOf(R.id.grid_img,R.id.grid_name)) // 使用/layout/cell.xml文件作为界面布局
+            arrayOf("image"), intArrayOf(R.id.grid_img)) // 使用/layout/cell.xml文件作为界面布局
 
         gridView = headerView.findViewById(R.id.grid)
         gridView.adapter = simpleAdapter
@@ -88,15 +104,14 @@ class List_Fragment : Fragment() {
                                         view: View, position: Int, id: Long)
             {
                 // 显示当前被选中的图片
-//                view.grid_img.setImageResource(imageIds[position])
-//                view.grid_name.text = textIds[position]
-//                Log.d(TAG, "onItemSelected: textt = ${view.grid_name.text}")
+                //imageView.setImageResource(imageIds[position])
             }
+
             override fun onNothingSelected(parent: AdapterView<*>)
             {
             }
         }
-        //gridView点击事件
+        //点击事件
         gridView.onItemClickListener = object: AdapterView.OnItemClickListener{
             override fun onItemClick(
                 parent: AdapterView<*>?,
@@ -108,12 +123,17 @@ class List_Fragment : Fragment() {
             }
         }
 
-        videol = headerView.findViewById(R.id.videoL)
-        videol.setOnClickListener {
-            Toast.makeText(context,"跳转",Toast.LENGTH_SHORT).show()
-            val intent = Intent(activity,VideoActivity::class.java)
-            startActivity(intent)
-        }
+
+
+//        val gridList: MutableList<Bean_grid> = java.util.ArrayList()
+//        for (i in 0..4){
+//            gridList.add(Bean_grid(
+//                "樱桃小丸子",
+//                "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201410%2F20%2F20141020162058_UrMNe.jpeg&refer=http%3A%2F%2Fcdn.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1620913801&t=ee2ff3e8f40b082221a141066b779bb6"
+//            ))
+//        }
+        //val gAdapter = GridAdapter(context!!,gridList)
+        //gridView.adapter = gAdapter
 
 
         //下拉刷新
@@ -153,24 +173,17 @@ class List_Fragment : Fragment() {
     //添加列表数据
     private fun initList(){
         val item1 = Bean_mainList(
-            "护眼小贴士",
+            "AAAAA",
             "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2676935521,922112450&fm=11&gp=0.jpg"
         )
+        list.add(item1)
+        list.add(item1)
+
         val item2 = Bean_mainList(
             "BBBBB",
             "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3824886304,665215047&fm=26&gp=0.jpg"
         )
-        val item3 = Bean_mainList(
-            "BBBBB",
-            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3824886304,665215047&fm=26&gp=0.jpg"
-        )
-        val item4 = Bean_mainList(
-            "BBBBB",
-            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3824886304,665215047&fm=26&gp=0.jpg"
-        )
-        list.add(item1)
         list.add(item2)
-        list.add(item1)
         list.add(item2)
 
     }

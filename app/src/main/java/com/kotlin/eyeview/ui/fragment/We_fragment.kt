@@ -7,8 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kotlin.eyeview.R
-import com.kotlin.eyeview.ui.Achromatopsia.activity.QuestionActivity
-import com.kotlin.eyeview.ui.Achromatopsia.common.Constants
+import com.kotlin.eyeview.ui.detection.activity.AstigmatismActivity
+import com.kotlin.eyeview.ui.detection.activity.QuestionActivity
+import com.kotlin.eyeview.ui.detection.common.Constants
 import kotlinx.android.synthetic.main.we_fragment.*
 
 
@@ -25,10 +26,7 @@ class We_Fragment:Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         challenge.setOnClickListener {
-                val intent = Intent(activity, QuestionActivity::class.java)
-                val questionCount = "2"
-                questionCount.toInt()
-                intent.putExtra(Constants.QUESTION_COUNT, questionCount)
+                val intent = Intent(activity, AstigmatismActivity::class.java)
                 startActivity(intent)
             }
     }

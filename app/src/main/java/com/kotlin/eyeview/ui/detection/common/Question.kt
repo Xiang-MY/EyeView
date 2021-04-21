@@ -1,4 +1,4 @@
-package com.kotlin.eyeview.ui.Achromatopsia.common
+package com.kotlin.eyeview.ui.detection.common
 
 /**
  * @author: ffzs

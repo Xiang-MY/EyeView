@@ -1,11 +1,11 @@
-package com.kotlin.eyeview.ui.Achromatopsia.activity
+package com.kotlin.eyeview.ui.detection.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kotlin.eyeview.R
-import com.kotlin.eyeview.ui.Achromatopsia.common.Constants
+import com.kotlin.eyeview.ui.detection.common.Constants
 import com.kotlin.eyeview.ui.activity.MainActivity
 import kotlinx.android.synthetic.main.activity_result.*
 
