@@ -31,7 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:id="@+id/item_name"

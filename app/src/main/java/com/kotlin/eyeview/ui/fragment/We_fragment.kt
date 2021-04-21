@@ -26,7 +26,10 @@ class We_Fragment:Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         challenge.setOnClickListener {
-                val intent = Intent(activity, AstigmatismActivity::class.java)
+                val intent = Intent(activity, QuestionActivity::class.java)
+                val questionCount = "2"
+                questionCount.toInt()
+                intent.putExtra(Constants.QUESTION_COUNT, questionCount)
                 startActivity(intent)
             }
     }

@@ -8,7 +8,7 @@
 
     <TextView
         android:background="@color/colorPrimary"
-        android:text="      我的"
+        android:text="我的"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="18sp"

@@ -9,15 +9,28 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许读取手机状态 用于创建BmobInstallation -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <!--视频播放权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
     <application
+        android:name=".ui.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Achromatopsia.activity.ResultActivity"></activity>
-        <activity android:name=".ui.Achromatopsia.activity.QuestionActivity" />
+<!--        <activity android:name=".ui.Achromatopsia.activity.ResultActivity"></activity>-->
+<!--        <activity android:name=".ui.Achromatopsia.activity.QuestionActivity" />-->
+        <activity android:name=".ui.activity.VideoActivity"></activity>
+        <activity android:name=".ui.detection.activity.PressureActivity"></activity>
+        <activity android:name=".ui.detection.activity.PresbyopiaActivity" />
+        <activity android:name=".ui.detection.activity.SensitivityActivity" />
+        <activity android:name=".ui.detection.activity.AstigmatismActivity" />
+        <activity android:name=".ui.detection.activity.ResultActivity" />
+        <activity android:name=".ui.detection.activity.QuestionActivity" />
         <activity android:name=".ui.SetPassword" />
         <activity android:name=".ui.activity.RegisterActivity" />
         <activity android:name=".ui.activity.LoginActivity" />
