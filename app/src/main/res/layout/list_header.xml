@@ -83,7 +83,7 @@
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/loveeye_img1"
+                        android:src="@drawable/img1"
                         />
 
                     <TextView
@@ -91,7 +91,7 @@
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textColor="#000"
-                        android:text="爱护眼睛"
+                        android:text="揉天应穴"
                         />
 
                 </LinearLayout>
@@ -106,7 +106,7 @@
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/loveeye_img1"
+                        android:src="@drawable/img2"
                         />
 
                     <TextView
@@ -114,7 +114,7 @@
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textColor="#000"
-                        android:text="爱护眼睛"/>
+                        android:text="挤按晴明穴"/>
 
                 </LinearLayout>
 
@@ -128,7 +128,7 @@
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/loveeye_img1"
+                        android:src="@drawable/img3"
                         />
 
                     <TextView
@@ -136,7 +136,29 @@
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textColor="#000"
-                        android:text="爱护眼睛"/>
+                        android:text="揉四白穴"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="160dp"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/img4"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:text="按太阳穴、轮刮眼眶"/>
 
                 </LinearLayout>
 
@@ -154,7 +176,7 @@
         android:paddingTop="10dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#000"
+        android:textColor="#6E9145"
         android:background="#FFFFFF"/>
 
 

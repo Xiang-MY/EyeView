@@ -58,7 +58,7 @@ public class RadarChartManager {
         // Y坐标值字体样式
 
         // Y坐标值标签个数
-        yAxis.setLabelCount(6, false);
+        yAxis.setLabelCount(5, false);
         // Y坐标值字体大小
         yAxis.setTextSize(15f);
         yAxis.setTextColor(Color.parseColor("#a1a1a1"));
@@ -113,7 +113,7 @@ public class RadarChartManager {
             RadarDataSet radarDataSet = new RadarDataSet(yValues, names.get(i));
             radarDataSet.setColor(colors.get(i));
             //设置是否填充区域
-            radarDataSet.setDrawFilled(true);
+            radarDataSet.setDrawFilled(false);
             //填充区域的颜色
             radarDataSet.setFillColor(colors.get(i));
             //填充区域同颜色的alpha值

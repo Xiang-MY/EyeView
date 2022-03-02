@@ -5,10 +5,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/corners_shade"
+        android:orientation="vertical"
         >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="本周使用手机时长"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            />
 
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/bar_chart"
@@ -16,6 +24,16 @@
             android:layout_height="250dp"
             android:layout_margin="10dp"
             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text2"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:textSize="16sp"/>
     </LinearLayout>
 
 

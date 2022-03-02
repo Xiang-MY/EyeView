@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlin.eyeview.R
+import com.kotlin.eyeview.ui.activity.VideoActivity
 import com.kotlin.eyeview.ui.adapter.Bean_grid
 import com.kotlin.eyeview.ui.adapter.Bean_mainList
 import com.kotlin.eyeview.ui.adapter.List_Adapter
@@ -61,7 +62,20 @@ class List_Fragment : Fragment() {
             R.layout.list_item,
             list
         )//适配器
+
+        //recyclerview的点击事件
+        adapter!!.setOnItemClickListener { adapter, view, position ->
+            val intent = Intent(activity,VideoActivity::class.java)
+            startActivity(intent)
+        }
+        //recyclerview的长按事件
+//        adapter!!.setOnItemLongClickListener { adapter, view, position ->
+//
+//        }
+
+
         recyclerView.adapter = adapter
+
 
         //添加头部
         val headerView = LayoutInflater.from(context).inflate(R.layout.list_header,null)
@@ -105,7 +119,7 @@ class List_Fragment : Fragment() {
                 position: Int,
                 id: Long
             ) {
-                toast("点击了第${position}项,值为${imageIds[position]}")
+//                toast("点击了第${position}项,值为${imageIds[position]}")
                 if(position==0){
                     val intent = Intent(activity, QuestionActivity::class.java)
                     startActivity(intent)
@@ -127,9 +141,10 @@ class List_Fragment : Fragment() {
             }
         }
 
+        //点击播放视频
         videol = headerView.findViewById(R.id.videoL)
         videol.setOnClickListener {
-            val intent = Intent(activity,VideoView::class.java)
+            val intent = Intent(activity,VideoActivity::class.java)
             startActivity(intent)
         }
 
@@ -171,25 +186,29 @@ class List_Fragment : Fragment() {
     //添加列表数据
     private fun initList(){
         val item1 = Bean_mainList(
-            "护眼小贴士",
-            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2676935521,922112450&fm=11&gp=0.jpg"
+            "十大悖论之色盲悖论",
+            R.drawable.semangbeilun
+//            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2676935521,922112450&fm=11&gp=0.jpg"
         )
         val item2 = Bean_mainList(
-            "BBBBB",
-            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3824886304,665215047&fm=26&gp=0.jpg"
+            "科普知识：色盲眼中的世界",
+            R.drawable.semangshijie
+//            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3824886304,665215047&fm=26&gp=0.jpg"
         )
         val item3 = Bean_mainList(
-            "BBBBB",
-            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3824886304,665215047&fm=26&gp=0.jpg"
+            "科普知识：近视和散光有什么不同",
+            R.drawable.sanguangkepu
+//            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3824886304,665215047&fm=26&gp=0.jpg"
         )
         val item4 = Bean_mainList(
-            "BBBBB",
-            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3824886304,665215047&fm=26&gp=0.jpg"
+            "科学用眼，关注健康",
+            R.drawable.kexueyongyan
+//            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3824886304,665215047&fm=26&gp=0.jpg"
         )
         list.add(item1)
+        list.add(item4)
         list.add(item2)
-        list.add(item1)
-        list.add(item2)
+        list.add(item3)
 
     }
 
@@ -203,5 +222,6 @@ class List_Fragment : Fragment() {
                 swipeRefresh.isRefreshing = false
             } }
     }
+
 
 }

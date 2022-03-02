@@ -7,12 +7,17 @@
     android:background="@drawable/backgrand"
     >
 
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@drawable/kaiping"/>-->
+
     <LinearLayout
         android:id="@+id/controlR1"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="300dp"
         android:layout_marginLeft="50dp">
         <EditText
             android:id="@+id/username"
@@ -46,30 +51,7 @@
             android:text="Sing In"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="250dp">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:src="@drawable/phone" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:src="@drawable/wechat" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:src="@drawable/qq" />
-    </LinearLayout>
 
 
 </LinearLayout>

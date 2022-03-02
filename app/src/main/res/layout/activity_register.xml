@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="300dp"
         android:layout_marginLeft="50dp"
         >
 
@@ -28,13 +28,13 @@
                 android:layout_weight="2"
                 android:maxLength="11"
                 android:background="@drawable/usernamestyle"
-                android:hint="  手机号" />
+                android:hint="  phone number" />
             <TextView
                 android:id="@+id/sendVerification"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_weight="1"
-                android:text=" 发送验证码"
+                android:text=" Send"
                 android:gravity="center"
                 android:textColor="#3F51B5"
                 />
@@ -47,7 +47,7 @@
             android:layout_height="42dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/passwordstyle"
-            android:hint="  验证码"/>
+            android:hint="  security code"/>
 
         <Button
             android:id="@+id/Submit"

@@ -1,4 +1,6 @@
 <resources>
-    <string name="app_name">EYEDT</string>
+    <string name="app_name">观眼</string>
     <string name="textview">测试</string>
+    <string name="text1">&#160;&#160;&#8201;本次测试结果为轻度红绿色盲，出现对颜色分辨不出来的情况，可以进行专业针对色盲的训练，主要能分辨出红绿黄色，平时应多做眼保健操缓解眼部疲劳，增加微量元素的摄入量。</string>
+    <string name="text2">&#160;&#160;&#8201;本周每天使用手机时长平均在六小时以上，过度使用手机会损害眼部健康，请注意用眼健康，多与大自然接触，减少使用电子产品哟！</string>
 </resources>

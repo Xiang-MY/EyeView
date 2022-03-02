@@ -30,14 +30,14 @@ class PersonalData: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.personaldata, container, false)
-        pieChart = view.findViewById(R.id.pie_chart)
+//        pieChart = view.findViewById(R.id.pie_chart)
         barChart = view.findViewById(R.id.bar_chart)
         radarchart = view.findViewById(R.id.radar_chart)
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        show_pie_chart()
+//        show_pie_chart()
         show_radar_chart()
         show_bar_chart()
     }
@@ -89,24 +89,22 @@ class PersonalData: Fragment() {
             ArrayList()
         val names: MutableList<String> =
             ArrayList()
-        names.add("东城区")
-        names.add("朝阳区")
-        names.add("西城")
-        names.add("丰台区")
-        names.add("石景山")
-        names.add("房山区")
-        xData.add("总体")
-        xData.add("交通设施")
-        xData.add("评价")
-        xData.add("平均")
-        xData.add("交通治理")
-        xData.add("交通需求")
-        xData.add("交通拥堵指数")
+        names.add("色盲")
+        names.add("老花眼")
+        names.add("散光")
+        names.add("压力")
+        names.add("敏感度")
+
+        xData.add("色盲")
+        xData.add("老花眼")
+        xData.add("散光")
+        xData.add("压力")
+        xData.add("敏感度")
         val colors: MutableList<Int> = ArrayList()
-        for (i in 0..5) {
+        for (i in 0..4) {
             val nData: MutableList<Float> =
                 ArrayList()
-            for (j in 0..6) {
+            for (j in 0..4) {
                 nData.add((Math.random() * 20).toFloat())
             }
             yDatas.add(nData)

@@ -9,27 +9,49 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="本周使用手机时长"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            />
+            android:background="@drawable/corners_shade"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试报告"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"/>
+
+
+            <include
+                layout="@layout/radarchart"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text1"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="2dp"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+
 
         <include
             layout="@layout/barchart"/>
 
-        <include
-            layout="@layout/radarchart"/>
 
-        <include
-            layout="@layout/piechart"/>
+
+<!--        <include-->
+<!--            layout="@layout/piechart"/>-->
 
     </LinearLayout>
-
-
-
-
 
 </ScrollView>
