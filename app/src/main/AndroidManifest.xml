@@ -22,7 +22,9 @@
         <activity android:name=".ui.activity.CameraActivity"></activity>
         <!-- <activity android:name=".ui.Achromatopsia.activity.ResultActivity"></activity> -->
         <!-- <activity android:name=".ui.Achromatopsia.activity.QuestionActivity" /> -->
-        <activity android:name=".ui.activity.VideoActivity" />
+        <!-- 添加android:screenOrientation="landscape"视频播放自动横屏，不写默认竖屏       -->
+        <activity android:name=".ui.activity.VideoActivity"
+            android:screenOrientation="landscape"/>
         <activity android:name=".ui.detection.activity.PressureActivity" />
         <activity android:name=".ui.detection.activity.PresbyopiaActivity" />
         <activity android:name=".ui.detection.activity.SensitivityActivity" />

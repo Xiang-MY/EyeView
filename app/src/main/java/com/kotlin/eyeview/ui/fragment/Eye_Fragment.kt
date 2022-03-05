@@ -17,8 +17,8 @@ class Eye_Fragment : Fragment() {
     var viewPager: ViewPager? = null
     var tabLayout: TabLayout? = null
     var pageAdapter: PageAdapter? = null
-    var fragmentList: MutableList<Fragment> = ArrayList()
-    var titles: MutableList<String> = ArrayList()
+    var fragmentList: MutableList<Fragment> = ArrayList()  //页面列表
+    var titles: MutableList<String> = ArrayList() //页面标题
     var rootView: View? = null //缓存Fragment view，防止页面切换造成数据清除
 
     override fun onCreateView(
