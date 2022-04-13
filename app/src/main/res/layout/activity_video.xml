@@ -15,7 +15,17 @@
             android:id="@+id/videoView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
+            android:background="#00000000"/>
+
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:id="@+id/blurchange"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            app:realtimeBlurRadius="100dp"
+            app:realtimeOverlayColor="#1000"/>
     </RelativeLayout>
+
+
 
 </LinearLayout>

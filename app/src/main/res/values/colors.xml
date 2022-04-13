@@ -8,4 +8,8 @@
     <color name="white">#FFFFFF</color>
     <color name="text_color">#CCCCCC</color>
 
+    <color name="mGreen">#53b679</color>
+    <color name="mBlack">#222222</color>
+    <color name="mGrayDark">#666666</color>
+
 </resources>
