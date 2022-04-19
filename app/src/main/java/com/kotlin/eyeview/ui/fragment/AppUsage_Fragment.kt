@@ -79,7 +79,7 @@ class AppUsage_Fragment : Basefragment() {
             0 -> getAppUsage(todayTime0, currTime)
             1 -> {
                 val todayTime0 = todayTime0
-                getAppUsage(currTime - DateUtils.DAY_IN_MILLIS, currTime)
+                getAppUsage(todayTime0 - DateUtils.DAY_IN_MILLIS, todayTime0)
             }
             2 -> getAppUsage(currTime - DateUtils.WEEK_IN_MILLIS, currTime)
             3 -> getAppUsage(currTime - DateUtils.DAY_IN_MILLIS * 30, currTime)

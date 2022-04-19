@@ -4,12 +4,6 @@ import android.util.Log;
 
 import java.text.DecimalFormat;
 
-/**
- * Created by LK on 2018/3/15.
- *
- * @author LK
- */
-
 public class PieData {
     private String text;
     private float value;

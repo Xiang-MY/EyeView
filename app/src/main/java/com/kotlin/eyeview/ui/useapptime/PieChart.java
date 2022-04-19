@@ -17,12 +17,6 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-/**
- * Created by LK on 2018/3/15.
- *
- * @author LK
- */
-
 public class PieChart extends View {
     /**
      * 画笔

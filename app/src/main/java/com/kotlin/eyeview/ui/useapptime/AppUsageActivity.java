@@ -228,15 +228,3 @@ public class AppUsageActivity extends BaseActivity {
     }
 
 }
-//
-//    PieChart pieChart = mHolder.progress;
-//    List<PieData> pieData = new ArrayList<>();
-//        for (int i = 0; i < mItems.size(); i++){
-//        Log.d(TAG, "getAppUsage: 应用名称："+mItems.get(i).getAppName());
-//        Log.d(TAG, "initAdapter: 应用总时长："+mItems.get(i).getTotalTimeInForeground()+"  " + JDateKit.timeToStringChineChinese(mItems.get(i).getTotalTimeInForeground())); //打印应用使用时长
-////            pieData.add(new PieData(mItems.get(i).getAppName(),(float) mItems.get(i).getTotalTimeInForeground()));
-//        }
-//        for (int i = 0; i < 6; i++) {
-//        pieData.add(new PieData("text" + i, (float) Math.random() * 90));
-//        }
-//        pieChart.setData(pieData,1);

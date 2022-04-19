@@ -3,11 +3,6 @@ package com.kotlin.eyeview.ui.useapptime;
 import android.app.Application;
 import android.content.Context;
 
-/**
- * Created by ZengCS on 2019/5/30.
- * E-mail:zengcs@vip.qq.com
- * Add:成都市天府软件园E3
- */
 public class BaseApplication extends Application {
     private static BaseApplication mApplication;
 
