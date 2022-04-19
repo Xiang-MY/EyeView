@@ -35,7 +35,7 @@ public class PieData {
     }
 
     public String getPercentage() {
-        DecimalFormat decimalFormat = new DecimalFormat("00.0");
+        DecimalFormat decimalFormat = new DecimalFormat(".0");
         Log.e("Lzx", Percentage + "");
         return decimalFormat.format(Percentage*100) + "%";
     }

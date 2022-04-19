@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
     android:layout_marginBottom="50dp">
 
     <com.google.android.material.tabs.TabLayout
@@ -41,9 +42,9 @@
             <!--                android:layout_height="200dp"-->
             <!--                android:layout_gravity="center"-->
             <!--                />-->
-            <com.kotlin.eyeview.ui.useapptime.PieChart
+            <com.kotlin.eyeview.ui.useapptime.RingChart
                 android:id="@+id/progress"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
                 />

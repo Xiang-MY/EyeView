@@ -7,8 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
-import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.kotlin.eyeview.R
@@ -17,7 +15,7 @@ import com.kotlin.eyeview.ui.useapptime.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AppUsage_Fragment : Fragment() {
+class AppUsage_Fragment : Basefragment() {
 
     private var _mHolder : AppusageFragmentBinding? = null
     private val mHolder get() = _mHolder!!
@@ -129,7 +127,7 @@ class AppUsage_Fragment : Fragment() {
 //        selfStatistics.setDatas(datas);
 //        selfStatistics.startDraw();
 //        PieChart pieChart = mHolder.progress;
-//        showLoading("数据分析中...")
+        showLoading("数据分析中...")
 
         // a task can be executed only once,init is required every time
         mLoadAppUsageTask = LoadAppUsageTask(beginTime, endTime) { list: ArrayList<AppUsageBean?>? ->
@@ -150,7 +148,7 @@ class AppUsage_Fragment : Fragment() {
 
 //        title = String.format("%s", title)
         //环形统计图设置仅显示前五条数据
-        val pieChart = mHolder!!.progress
+        val ringChart = mHolder.progress
         val pieData: MutableList<PieData> = ArrayList()
         //        pieData.add(new PieData("text", (float) Math.random() * 90));
         for (i in mItems!!.indices) {
@@ -170,7 +168,7 @@ class AppUsage_Fragment : Fragment() {
                 )
             ) //打印应用使用时长
         }
-        pieChart.setData(pieData, 1)
+        ringChart.setData(pieData)
 
         if (mAdapter == null) {
             val fmt = "yyyy-MM-dd HH:mm:ss"
@@ -209,7 +207,14 @@ class AppUsage_Fragment : Fragment() {
         } else {
             mAdapter!!.setNewInstance(mItems)
         }
-
+        //        PieChart pieChart = mHolder.progress;
+//        List<PieData> pieData = new ArrayList<>();
+//        for (int i = 0; i < mItems.size(); i++){
+//            Log.d(TAG, "initAdapter: " + JDateKit.timeToStringChineChinese(mItems.get(i).getTotalTimeInForeground())); //打印应用使用时长
+//            pieData.add(new PieData(mItems.get(i).getAppName(),(float) mItems.get(i).getTotalTimeInForeground()));
+//        }
+//        pieChart.setData(pieData,1);
+        hideLoading()
     }
 
     private fun initData() {
